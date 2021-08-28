@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>HomeForm.ui.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>images/pagamento.png</file>
+        <file>images/negozio.png</file>
+        <file>QRscan.ui.qml</file>
+        <file>InsertMoney.ui.qml</file>
+        <file>Recap.ui.qml</file>
+        <file>TransactionCompleted.ui.qml</file>
+        <file>images/spunta.png</file>
+        <file>Shop.ui.qml</file>
+        <file>images/profile.png</file>
+        <file>images/promotions.png</file>
+        <file>images/announcements.png</file>
+        <file>images/customers.png</file>
+        <file>images/barlogo.png</file>
+        <file>Profile.ui.qml</file>
+        <file>Promotions.ui.qml</file>
+        <file>images/edit.png</file>
+        <file>images/caffe.png</file>
+        <file>Messages.ui.qml</file>
+        <file>Customers.ui.qml</file>
+        <file>CustomerDetail.ui.qml</file>
+        <file>images/avatar.png</file>
+        <file>NewPromotion.ui.qml</file>
+        <file>Theshold.ui.qml</file>
+    </qresource>
+</RCC>
