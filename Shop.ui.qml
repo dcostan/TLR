@@ -8,17 +8,10 @@ Page {
 
     title: qsTr("Il mio negozio")
 
-    Image {
-        x: (stackView.width/2) - 75
-        y: 20
-        width: 150
-        height: 150
-        source: "qrc:/images/barlogo.png"
-    }
 
     Image {
         x: (stackView.width/4) - 50
-        y: 200
+        y: 100
         width: 100
         height: 100
         source: "qrc:/images/profile.png"
@@ -28,9 +21,18 @@ Page {
         }
     }
 
+    Text {
+        x: profile.parent.x
+        y: profile.parent.y + profile.height + 10
+        width: profile.width
+        text: qsTr("Profilo")
+        horizontalAlignment: Text.AlignHCenter
+        font.pixelSize: 20
+    }
+
     Image {
         x: (stackView.width*3/4) - 50
-        y: 200
+        y: 100
         width: 100
         height: 100
         source: "qrc:/images/promotions.png"
@@ -40,9 +42,18 @@ Page {
         }
     }
 
+    Text {
+        x: promotions.parent.x
+        y: promotions.parent.y + promotions.height + 10
+        width: promotions.width
+        text: qsTr("Promozioni")
+        horizontalAlignment: Text.AlignHCenter
+        font.pixelSize: 20
+    }
+
     Image {
         x: (stackView.width/4) - 50
-        y: 360
+        y: 320
         width: 100
         height: 100
         source: "qrc:/images/announcements.png"
@@ -52,9 +63,18 @@ Page {
         }
     }
 
+    Text {
+        x: messages.parent.x
+        y: messages.parent.y + messages.height + 10
+        width: messages.width
+        text: qsTr("Comunicazioni")
+        horizontalAlignment: Text.AlignHCenter
+        font.pixelSize: 20
+    }
+
     Image {
         x: (stackView.width*3/4) - 50
-        y: 360
+        y: 320
         width: 100
         height: 100
         source: "qrc:/images/customers.png"
@@ -62,6 +82,15 @@ Page {
             id: customers
             anchors.fill: parent
         }
+    }
+
+    Text {
+        x: customers.parent.x
+        y: customers.parent.y + customers.height + 10
+        width: customers.width
+        text: qsTr("Clienti")
+        horizontalAlignment: Text.AlignHCenter
+        font.pixelSize: 20
     }
 
     Connections {

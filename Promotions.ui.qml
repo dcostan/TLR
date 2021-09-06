@@ -19,7 +19,7 @@ Page {
 
         Image {
             x: 20
-            y: 40
+            y: 30
             width: 70
             height: 70
             source: "qrc:/images/caffe.png"
@@ -27,14 +27,14 @@ Page {
 
         Text {
             x: 120
-            y: 40
+            y: 30
             text: qsTr("Caffè + Brioche")
             font.pixelSize: 15
         }
 
         Text {
             x: 120
-            y: 80
+            y: 70
             text: qsTr("2 euro")
             font.pixelSize: 28
         }
@@ -46,6 +46,14 @@ Page {
             width: 30
             height: 30
             source: "qrc:/images/edit.png"
+        }
+
+        Text {
+            x: parent.width - 165
+            y: parent.height - 25
+            text: qsTr("Passa a PRO per le statistiche")
+            font.pixelSize: 10
+            font.underline: true
         }
 
     }

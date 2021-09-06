@@ -13,11 +13,6 @@ Page {
         onClicked: stackView.pop()
     }
 
-    Connections {
-        target: theshold
-        onClicked: stackView.push("Theshold.ui.qml")
-    }
-
     Image {
         x: (stackView.width/4) - 50
         y: 20
@@ -28,23 +23,10 @@ Page {
 
     Text {
         x: (stackView.width/2)
-        y: 45
+        y: 50
         text: qsTr("Unosso Bar")
         horizontalAlignment: Text.AlignHCenter
         font.pixelSize: 25
-    }
-
-    Text {
-        x: (stackView.width/2)
-        y: 80
-        text: qsTr("Le mie soglie")
-        font.pixelSize: 12
-        font.underline: true
-
-        MouseArea {
-            id: theshold
-            anchors.fill: parent
-        }
     }
 
     TextField {
