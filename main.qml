@@ -1,14 +1,12 @@
 import QtQuick 2.9
 import QtQuick.Controls 2.2
-import QtLocation 5.9
-import QtPositioning 5.9
 
 ApplicationWindow {
     id: window
     visible: true
     width: 380
     height: 640
-    title: qsTr("Stack")
+    title: qsTr("TLR")
 
     header: ToolBar {
         contentHeight: toolButton.implicitHeight
@@ -21,8 +19,6 @@ ApplicationWindow {
             onClicked: {
                 if (stackView.depth > 1) {
                     stackView.pop()
-                } else {
-                    drawer.open()
                 }
             }
         }
@@ -60,7 +56,7 @@ ApplicationWindow {
         }
     }
 
-    Plugin {
+    /*Plugin {
         id: mapPlugin
         name: "osm" // "mapboxgl", "esri", ...
         // specify plugin parameters if necessary
@@ -68,7 +64,7 @@ ApplicationWindow {
         //     name:
         //     value:
         // }
-    }
+    }*/
 
     StackView {
         id: stackView
