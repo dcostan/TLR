@@ -9,6 +9,7 @@ ApplicationWindow {
     title: qsTr("TLR")
 
     header: ToolBar {
+        visible: stackView.currentItem.title !== "Tutorial"
         contentHeight: toolButton.implicitHeight
 
         ToolButton {
@@ -29,7 +30,7 @@ ApplicationWindow {
         }
     }
 
-    Drawer {
+    /*Drawer {
         id: drawer
         width: window.width * 0.66
         height: window.height
@@ -54,7 +55,7 @@ ApplicationWindow {
                 }
             }
         }
-    }
+    }*/
 
     /*Plugin {
         id: mapPlugin
@@ -70,5 +71,8 @@ ApplicationWindow {
         id: stackView
         initialItem: "HomeForm.ui.qml"
         anchors.fill: parent
+        property int tutorialIndex: 1
     }
+
+    Component.onCompleted: stackView.push("Tutorial.ui.qml")
 }
