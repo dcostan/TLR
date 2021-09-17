@@ -21,8 +21,8 @@ Page {
 
     Image {
         id: tutorialImage
-        x: (parent.width/2) - width/2
-        y: (parent.height/2) - height/2
+        x: 0
+        y: (stackView.height/2) - height/2
         width: stackView.width
         height: width * 1.776
         source: "qrc:/images/tutorial/" + stackView.tutorialIndex + ".png"
