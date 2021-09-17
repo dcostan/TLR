@@ -57,7 +57,7 @@ Page {
         Text {
             x: 50
             y: 50
-            width: stackView.width - 100
+            width: stackView.width - 120
             text: qsTr("Mi sono trovato davvero bene in questo bar, lo consiglio!")
             wrapMode: Label.WordWrap
             font.pixelSize: 16
@@ -68,6 +68,14 @@ Page {
             y: parent.height - 40
             text: qsTr("01/02/2021")
             font.pixelSize: 10
+        }
+
+        Image {
+            x: parent.width - 50
+            y: 17
+            width: 30
+            height: 30
+            source: "qrc:/images/suggest.png"
         }
 
     }
