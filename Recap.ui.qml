@@ -8,38 +8,6 @@ Page {
 
     title: qsTr("Riepilogo")
 
-    Popup {
-        id: popup
-        x: stackView.width/2 - popup.width/2
-        y: 100
-        width: stackView.width - 20
-        height: 200
-        modal: true
-        focus: true
-        closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutsideParent
-
-        Text {
-            width: popup.width
-            y: 40
-            text: qsTr("Come vuoi pagare?")
-            horizontalAlignment: Text.AlignHCenter
-            font.pixelSize: 20
-        }
-
-        Button {
-            id: analogPay
-            x: popup.width/3 - analogPay.width/2
-            y: 100
-            text: qsTr("Al banco")
-        }
-        Button {
-            id: digitalPay
-            x: popup.width*2/3 - digitalPay.width/2
-            y: 100
-            text: qsTr("Con l’app")
-        }
-    }
-
     Text {
         width: stackView.width
         y: 60
@@ -114,23 +82,7 @@ Page {
 
     Connections {
         target: button
-        onClicked: popup.open()
-    }
-
-    Connections {
-        target: analogPay
-        onClicked: {
-            popup.close()
-            stackView.push("TransactionCompleted.ui.qml")
-        }
-    }
-
-    Connections {
-        target: digitalPay
-        onClicked: {
-            popup.close()
-            stackView.push("TransactionCompleted.ui.qml")
-        }
+        onClicked: stackView.push("TransactionCompleted.ui.qml")
     }
 
 

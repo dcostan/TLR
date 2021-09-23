@@ -24,7 +24,7 @@ Page {
         x: profile.parent.x
         y: profile.parent.y + profile.height + 10
         width: profile.width
-        text: qsTr("Profilo")
+        text: qsTr("Dettagli")
         horizontalAlignment: Text.AlignHCenter
         font.pixelSize: 20
     }
@@ -94,7 +94,7 @@ Page {
 
     Connections {
         target: profile
-        onClicked: stackView.push("Profile.ui.qml")
+        onClicked: stackView.push("Details.ui.qml")
     }
 
     Connections {

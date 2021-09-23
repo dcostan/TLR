@@ -6,7 +6,7 @@ Page {
     width: 380
     height: 640
 
-    title: qsTr("Profilo")
+    title: qsTr("Dettagli negozio")
 
     Connections {
         target: button
@@ -24,7 +24,7 @@ Page {
     Text {
         x: (stackView.width/2)
         y: 50
-        text: qsTr("Unosso Bar")
+        text: qsTr("Tag Store")
         horizontalAlignment: Text.AlignHCenter
         font.pixelSize: 25
     }
@@ -90,7 +90,7 @@ Page {
         width: stackView.width - 120
         x: stackView.width/2 - width/2 + 50
         y: 300
-        text: qsTr("Colazioni, aperitivi e pranzi espressi in un locale storico del '900 con area esterna e vista sui navigli.")
+        text: qsTr("Negozio di abbigliamento, scarpe e accessori, inclusi borse e gioielli, firmati dalla stessa stilista.")
         font.italic: true
         wrapMode: Label.WordWrap
 

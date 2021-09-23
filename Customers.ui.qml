@@ -14,12 +14,12 @@ Page {
 
         ListView {
             width: stackView.width
-            model: ["- Platino (3 utenti)", "Filippo Russo", "Elisa Morini", "Gianmarco Massafra", "- Argento (3 utenti)", "Vanessa Mastroianni", "Filippo Pataro", "Davide Costa"]
+            model: ["- Oro (3 utenti)", "Fabrizio Dughiero", "Martina Nespoli", "- Argento (8 utenti)", "Vanessa Mastroianni", "Filippo Pataro", "Davide Costa", "Patrizia Cannavò", "Filippo Russo", "Cesare Cobelli", "Matteo Bianchi", "Francesco Ferri", "- Bronzo (4 utenti)", "Elisa Rubele", "Emma dal Zovo", "Aldo Moretto", "Gino Vassoi"]
             delegate: ItemDelegate {
                 text: modelData
                 width: stackView.width
-                enabled: !(index == 0 || index == 4)
-                font.bold: index == 0 || index == 4
+                enabled: !(index == 0 || index == 3 || index == 12)
+                font.bold: index == 0 || index == 3 || index == 12
                 onClicked: stackView.push("CustomerDetail.ui.qml")
             }
         }

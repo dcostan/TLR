@@ -38,5 +38,14 @@
         <file>images/tutorial/9.png</file>
         <file>images/tutorial/10.png</file>
         <file>images/suggest.png</file>
+        <file>images/dughierocapodelmondo.png</file>
+        <file>images/immanuelnazionale.png</file>
+        <file>Details.ui.qml</file>
+        <file>images/sweatshirt.png</file>
+        <file>images/internet.png</file>
+        <file>images/posizione.png</file>
+        <file>images/telefono.png</file>
+        <file>images/time.png</file>
+        <file>images/tshirt.png</file>
     </qresource>
 </RCC>

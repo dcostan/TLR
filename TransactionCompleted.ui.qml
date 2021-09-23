@@ -24,6 +24,14 @@ Page {
         source: "qrc:/images/spunta.png"
     }
 
+    Text {
+        width: stackView.width
+        y: 350
+        text: qsTr("Il trasferimento di <b>120€</b> è avvenuto con successo")
+        horizontalAlignment: Text.AlignHCenter
+        font.pixelSize: 14
+    }
+
     Button {
         id: button
         x: stackView.width/2 - button.width/2

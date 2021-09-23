@@ -25,19 +25,29 @@ Page {
         width: stackView.width
         currentIndex: bar.currentIndex
             Item {
+                Text {
+                    y: 30
+                    x: stackView.width/2 - width/2
+                    width: stackView.width - 40
+                    text: qsTr("Qui puoi mandare avvisi ai tuoi clienti")
+                    font.pointSize: 15
+                    horizontalAlignment: Text.AlignHCenter
+                    wrapMode: Text.WordWrap
+                }
+
                 TextArea {
                     id: write
                     width: stackView.width - 120
                     x: stackView.width/2 - width/2 + 25
-                    y: 50
+                    y: 100
                     placeholderText: qsTr("Scrivi in bacheca...")
                     wrapMode: Label.WordWrap
 
                     Image {
                         anchors {
-                            top: parent.top
                             left: parent.left; leftMargin: -70; bottomMargin: 7
                         }
+                        y: -10
                         width: 60
                         height: 60
                         source: "qrc:/images/barlogo.png"
@@ -47,7 +57,7 @@ Page {
                 CheckBox {
                     id: push
                     x: stackView.width/2 - width/2
-                    y: write.x + write.height
+                    y: write.y + write.height + 10
                     anchors.horizontalCenter: parent.horizontalCenter
                     text: qsTr("  Invia notifica push")
                 }
@@ -55,7 +65,7 @@ Page {
                 Button {
                     id: publicButton
                     x: stackView.width/2 - width/2
-                    y: write.x + write.height + push.height + 10
+                    y: write.y + write.height + push.height + 20
                     text: qsTr("Pubblica")
                 }
 
@@ -66,6 +76,7 @@ Page {
                     radius: 7
                     y: publicButton.y + 150
                     x: stackView.width/2 - width/2
+                    visible: false
 
                     Image {
                         x: 20
@@ -103,6 +114,7 @@ Page {
                 }
 
                 DropShadow {
+                    id: dropAnnRect
                     anchors.fill: annRect
                     cached: true
                     horizontalOffset: 3
@@ -111,24 +123,19 @@ Page {
                     samples: 16
                     color: "#80000000"
                     source: annRect
+                    visible: false
                 }
             }
 
             Item {
                 Text {
                     y: 30
-                    width: stackView.width
-                    text: qsTr("COSA NE PENSANO")
+                    x: stackView.width/2 - width/2
+                    width: stackView.width - 40
+                    text: qsTr("Ecco i consigli dei clienti che hanno acquistato nel tuo negozio")
                     font.pointSize: 15
                     horizontalAlignment: Text.AlignHCenter
-                }
-
-                Text {
-                    y: 60
-                    width: stackView.width
-                    text: qsTr("I TUOI CLIENTI")
-                    font.pointSize: 15
-                    horizontalAlignment: Text.AlignHCenter
+                    wrapMode: Text.WordWrap
                 }
 
                 Rectangle {
@@ -151,7 +158,7 @@ Page {
                              anchors.centerIn: parent
                              width: 65
                              height: 65
-                             source: "qrc:/images/avatar.png"
+                             source: "qrc:/images/dughierocapodelmondo.png"
                          }
                     }
 
@@ -159,7 +166,7 @@ Page {
                         x: 120
                         y: 50
                         width: 200
-                        text: qsTr("Le salsiccie andrebbero cotte un po' di più")
+                        text: qsTr("Sarebbe interessante avere a disposizione un reparto di calzature sportive.")
                         wrapMode: Label.WordWrap
                         font.pixelSize: 16
                     }
@@ -183,8 +190,69 @@ Page {
                     color: "#80000000"
                     source: consRect
                 }
+
+                Rectangle {
+                    id: consRect2
+                    width: stackView.width - 20
+                    height: 150
+                    radius: 7
+                    y: 290
+                    x: stackView.width/2 - width/2
+
+                    Rectangle {
+                         width: 75
+                         height: 75
+                         x: 20
+                         y: 40
+                         color: "grey"
+                         radius: width*0.5
+
+                         Image {
+                             anchors.centerIn: parent
+                             width: 65
+                             height: 65
+                             source: "qrc:/images/immanuelnazionale.png"
+                         }
+                    }
+
+                    Text {
+                        x: 120
+                        y: 50
+                        width: 200
+                        text: qsTr("Perchè non aprire una sezione di maglie tecniche per fare sport")
+                        wrapMode: Label.WordWrap
+                        font.pixelSize: 16
+                    }
+
+                    Text {
+                        x: parent.width - 80
+                        y: parent.height - 40
+                        text: qsTr("14/02/2021")
+                        font.pixelSize: 10
+                    }
+
+                }
+
+                DropShadow {
+                    anchors.fill: consRect2
+                    cached: true
+                    horizontalOffset: 3
+                    verticalOffset: 3
+                    radius: 7
+                    samples: 16
+                    color: "#80000000"
+                    source: consRect2
+                }
             }
 
+    }
+
+    Connections {
+        target: publicButton
+        onClicked: {
+            dropAnnRect.visible = true
+            annRect.visible = true
+        }
     }
 
 }
